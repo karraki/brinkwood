@@ -1799,6 +1799,21 @@ input.sheet-zero {
   margin: 0 auto;
 }
 
+.sheet-healing2 {
+  position: relative;
+}
+
+.sheet-healing2 .sheet-healing2-progress {
+  line-height: 14px;
+  text-align: center;
+  font-style: italic;
+  font-size: 9px;
+}
+
+.sheet-healing2 .sheet-clock-container {
+  margin: 0 auto;
+}
+
 .sheet-armor label {
   margin: 3px 0 3px 10px;
   height: 18px;
