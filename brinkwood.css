@@ -2087,12 +2087,15 @@ input.sheet-zero {
 }
 
 .sheet-stress2 {
+  padding: 0px 7px;
+  padding: 0px 7px;
   flex: 2 1 136px;
   position: relative;
 }
 
 .sheet-stress3 {
-  flex: 1 0 68px;
+  padding: 0px 7px;
+  flex: 1 0 72px;
   text-align: center;
 }
 

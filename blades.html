@@ -3,6 +3,7 @@
 <div>
   <input type="hidden" name="attr_stress_max" value="6"/>
   <input type="hidden" name="attr_trauma_max" value="4"/>
+  <input type="hidden" name="attr_oath_max" value="4"/>
   <input type="hidden" name="attr_coin_max" value="4"/>
   <input type="hidden" name="attr_stash_max" value="40"/>
   <input type="hidden" name="attr_playbook_xp_max" value="8"/>
@@ -150,7 +151,12 @@
     </div>
     <div class="setting-char">
       <label>
-        <input type="text" spellcheck="false" name="attr_setting_trauma_label" value="Trauma"/><span data-i18n="trauma_label"></span>
+        <input type="text" spellcheck="false" name="attr_setting_trauma_label" value="Scars"/><span data-i18n="trauma_label"></span>
+      </label>
+    </div>
+    <div class="setting-char">
+      <label>
+        <input type="text" spellcheck="false" name="attr_setting_oath_label" value="Oaths"/><span data-i18n="oath_label"></span>
       </label>
     </div>
     <div class="setting-char">
@@ -338,12 +344,30 @@
           <input class="tooth stresstooth" type="radio" name="attr_stress" value="4"/><span></span>
           <input class="tooth stresstooth" type="radio" name="attr_stress" value="5"/><span></span>
           <input class="tooth stresstooth" type="radio" name="attr_stress" value="6"/><span></span>
-          <input class="hidden extra-teeth" type="checkbox" name="attr_setting_extra_stress" value="0" checked="checked"/>
-          <input class="tooth stresstooth" type="radio" name="attr_stress" value="7"/><span></span>
-          <input class="hidden extra-teeth" type="checkbox" name="attr_setting_extra_stress" value="1"/>
-          <input class="tooth stresstooth" type="radio" name="attr_stress" value="8"/><span></span>
-          <input class="hidden extra-teeth" type="checkbox" name="attr_setting_extra_stress" value="2"/>
-          <input class="tooth stresstooth" type="radio" name="attr_stress" value="9"/><span></span>
+        </div>
+        <div class="stress3">
+          <div class="blackheader">
+            <div class="label"><span name="attr_setting_trauma_label"></span></div>
+          </div>
+          <div class="traumaholder flex">
+            <input class="tooth zero" type="radio" name="attr_trauma" value="0" checked="checked"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="1"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="2"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="3"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="4"/><span></span>
+          </div>
+        </div>
+        <div class="stress3">
+          <div class="blackheader">
+            <div class="label"><span name="attr_setting_oath_label"></span></div>
+          </div>
+          <div class="traumaholder flex">
+            <input class="tooth zero" type="radio" name="attr_oath" value="0" checked="checked"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_oath" value="1"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_oath" value="2"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_oath" value="3"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_oath" value="4"/><span></span>
+          </div>
         </div>
       </div>
       <div class="harm-coin grid sheet-2col">
@@ -361,34 +385,6 @@
             <div class="flex-center harmnumber">1</div>
             <textarea spellcheck="false" name="attr_harm1_1"></textarea>
             <textarea spellcheck="false" name="attr_harm1_2"></textarea>
-          </div>
-        </div>
-        <div class="healing">
-          <div class="col100 healing-progress" data-i18n="progress_clock"></div>
-          <input class="size" type="hidden" name="attr_recovery_max" value="4"/>
-          <div class="clock-container">
-            <div class="spoke-0 all"></div>
-            <div class="spoke-90 all"></div>
-            <input class="zero input-progress" type="radio" name="attr_recovery" value="0" checked="checked"/><span></span>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="1" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="2" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="3" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="4" data-i18n-title="recoveryblurb"/>
-            <div class="clock"></div>
-          </div>
-        </div>
-        <div class="healing2">
-          <div class="col100 healing-progress" data-i18n="progress_clock"></div>
-          <input class="size" type="hidden" name="attr_recovery_max" value="4"/>
-          <div class="clock-container">
-            <div class="spoke-0 all"></div>
-            <div class="spoke-90 all"></div>
-            <input class="zero input-progress" type="radio" name="attr_recovery" value="0" checked="checked"/><span></span>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="1" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="2" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="3" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="4" data-i18n-title="recoveryblurb"/>
-            <div class="clock"></div>
           </div>
         </div>
       </div>
@@ -3119,6 +3115,7 @@
         name: "playbook_item_rage_essence_vial",
         numboxes: "0"
       }, {
+        name: "playbook_item_spiritbane_charm",
         name: "playbook_item_spiritbane_charm",
         numboxes: "0"
       }]
