@@ -289,7 +289,7 @@
   <div class="type-character grid">
     <div class="left-column grid">
       <div class="header grid sheet-2col">
-        <div class="bladeslogo"></div>
+        <div class="brinkwoodlogo"></div>
         <label class="sheet-2col">
           <input type="text" spellcheck="false" name="attr_name"/>
           <div class="label text title" data-i18n="name"></div>
@@ -630,7 +630,7 @@
       <div class="actioncolumn">
         <div class="attribute">
           <div class="attribute-title flex">
-            <button class="rollbutton label" type="roll" name="roll_Insight" value="&{template:blades} {{charname=@{character_name}}} {{type=resist}} {{subtitle=^{resists} @{consequence_query} ^{with}}} {{title-insight=1}} {{title=^{insight}}} @{insight_formula} {{instructions=^{resist_instructions}}} @{insight_roll_mods} {{charimage=@{chat_image}}} @{title_text}" data-i18n-title="insight_description"><span class="default-label inherit" data-i18n="insight"></span><span class="custom-label inherit" name="attr_insight_label"></span>
+            <button class="rollbutton label" type="roll" name="roll_Insight" value="&{template:brinkwood} {{charname=@{character_name}}} {{type=resist}} {{subtitle=^{resists} @{consequence_query} ^{with}}} {{title-insight=1}} {{title=^{insight}}} @{insight_formula} {{instructions=^{resist_instructions}}} @{insight_roll_mods} {{charimage=@{chat_image}}} @{title_text}" data-i18n-title="insight_description"><span class="default-label inherit" data-i18n="insight"></span><span class="custom-label inherit" name="attr_insight_label"></span>
             </button>
             <input type="hidden" name="attr_insight" value="0"/>
             <input type="hidden" name="attr_insight_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
@@ -648,7 +648,7 @@
               <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_hunt" value="2"/><span></span>
               <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_hunt" value="3"/><span></span>
               <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_hunt" value="4"/><span></span>
-              <button class="rollbutton label" type="roll" name="roll_Hunt" value="&{template:blades} {{charname=@{character_name}}} {{type=action}} {{subtitle=^{rolls}}} {{title-hunt=1}} {{title=^{hunt}}} {{@{position_query}}} {{effect=@{effect_query}}} @{hunt_formula} @{hunt_roll_mods} {{charimage=@{chat_image}}} @{title_text}" data-i18n-title="hunt_description"><span class="default-label inherit" data-i18n="hunt"></span><span class="custom-label inherit" name="attr_hunt_label"></span>
+              <button class="rollbutton label" type="roll" name="roll_Hunt" value="&{template:brinkwood} {{charname=@{character_name}}} {{type=action}} {{subtitle=^{rolls}}} {{title-hunt=1}} {{title=^{hunt}}} {{@{position_query}}} {{effect=@{effect_query}}} @{hunt_formula} @{hunt_roll_mods} {{charimage=@{chat_image}}} @{title_text}" data-i18n-title="hunt_description"><span class="default-label inherit" data-i18n="hunt"></span><span class="custom-label inherit" name="attr_hunt_label"></span>
               </button>
             </div>
             <div class="action flex">

@@ -679,7 +679,7 @@ textarea.sheet-smallcaps {
 }
 
 /* LOGO */
-.sheet-bladeslogo {
+.sheet-brinkwoodlogo {
   height: 43px;
   background-image: url("https://github.com/karraki/brinkwood/blob/e82b7fe8cdcc01fca6bbba70d241b4498d37993b/Assets/logo.png");
   background-size: 102% auto;
@@ -3462,7 +3462,7 @@ button[type=roll].sheet-broadcast-button {
 
 /* Colors */
 /* Standard template */
-.sheet-rolltemplate-blades {
+.sheet-rolltemplate-brinkwood {
   /* Header */
   /* Image */
   /* Title */
@@ -3474,7 +3474,7 @@ button[type=roll].sheet-broadcast-button {
   /* Instructions and Notes */
 }
 
-.sheet-rolltemplate-blades .sheet-holder {
+.sheet-rolltemplate-brinkwood .sheet-holder {
   display: grid;
   align-content: start;
   align-items: end;
@@ -3491,21 +3491,21 @@ button[type=roll].sheet-broadcast-button {
   font-variant-numeric: lining-nums;
 }
 
-.withoutavatars .sheet-rolltemplate-blades .sheet-holder {
+.withoutavatars .sheet-rolltemplate-brinkwood .sheet-holder {
   margin-left: -15px;
 }
 
-.sheet-rolltemplate-blades .sheet-action {
+.sheet-rolltemplate-brinkwood .sheet-action {
   height: 258px;
   grid: 35px 53px 74px 54px / 133px 1fr;
   background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-action.gif");
 }
 
-.sheet-rolltemplate-blades .sheet-action.sheet-short {
+.sheet-rolltemplate-brinkwood .sheet-action.sheet-short {
   height: 195px;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune {
+.sheet-rolltemplate-brinkwood .sheet-fortune {
   min-height: 250px;
   grid: 35px 53px 42px auto / 56% 44%;
   background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-fortune.jpg");
@@ -3514,31 +3514,31 @@ button[type=roll].sheet-broadcast-button {
   height: auto;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune.sheet-short {
+.sheet-rolltemplate-brinkwood .sheet-fortune.sheet-short {
   min-height: 199px;
   grid: 0 31px 42px auto/ 56% 44%;
 }
 
-.sheet-rolltemplate-blades .sheet-resist,
-.sheet-rolltemplate-blades .sheet-vice {
+.sheet-rolltemplate-brinkwood .sheet-resist,
+.sheet-rolltemplate-brinkwood .sheet-vice {
   height: 258px;
   grid: 35px 35px 62px auto/ auto;
 }
 
-.sheet-rolltemplate-blades .sheet-resist.sheet-short,
-.sheet-rolltemplate-blades .sheet-vice.sheet-short {
+.sheet-rolltemplate-brinkwood .sheet-resist.sheet-short,
+.sheet-rolltemplate-brinkwood .sheet-vice.sheet-short {
   height: 171px;
 }
 
-.sheet-rolltemplate-blades .sheet-resist {
+.sheet-rolltemplate-brinkwood .sheet-resist {
   background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-resist.jpg");
 }
 
-.sheet-rolltemplate-blades .sheet-vice {
+.sheet-rolltemplate-brinkwood .sheet-vice {
   background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-vice.jpg");
 }
 
-.sheet-rolltemplate-blades .sheet-header {
+.sheet-rolltemplate-brinkwood .sheet-header {
   grid-column: span 2;
   display: -webkit-box;
   font-size: 15px;
@@ -3551,48 +3551,48 @@ button[type=roll].sheet-broadcast-button {
   text-overflow: ellipsis;
 }
 
-.sheet-rolltemplate-blades .sheet-header.sheet-narrow {
+.sheet-rolltemplate-brinkwood .sheet-header.sheet-narrow {
   width: calc(100% - 52px);
 }
 
-.sheet-rolltemplate-blades .sheet-resist .sheet-header {
+.sheet-rolltemplate-brinkwood .sheet-resist .sheet-header {
   color: #8da8bb;
 }
 
-.sheet-rolltemplate-blades .sheet-vice .sheet-header {
+.sheet-rolltemplate-brinkwood .sheet-vice .sheet-header {
   color: white;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune .sheet-header {
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-header {
   color: #303032;
   letter-spacing: 1px;
   font-weight: 800;
 }
 
-.sheet-rolltemplate-blades .sheet-action .sheet-header {
+.sheet-rolltemplate-brinkwood .sheet-action .sheet-header {
   color: #e74a10;
   letter-spacing: 1px;
   font-weight: 800;
 }
 
-.sheet-rolltemplate-blades .sheet-char-image {
+.sheet-rolltemplate-brinkwood .sheet-char-image {
   position: absolute;
   right: 10px;
   top: 10px;
   line-height: 0;
 }
 
-.sheet-rolltemplate-blades .sheet-char-image a {
+.sheet-rolltemplate-brinkwood .sheet-char-image a {
   cursor: default;
   pointer-events: none;
 }
 
-.sheet-rolltemplate-blades .sheet-char-image img {
+.sheet-rolltemplate-brinkwood .sheet-char-image img {
   max-width: 60px;
   max-height: 80px;
 }
 
-.sheet-rolltemplate-blades .sheet-title {
+.sheet-rolltemplate-brinkwood .sheet-title {
   grid-column: span 2;
   color: white;
   position: relative;
@@ -3600,42 +3600,42 @@ button[type=roll].sheet-broadcast-button {
   font-weight: bold;
 }
 
-.sheet-rolltemplate-blades .sheet-title img {
+.sheet-rolltemplate-brinkwood .sheet-title img {
   display: block;
   height: 100%;
 }
 
-.sheet-rolltemplate-blades .sheet-action .sheet-title,
-.sheet-rolltemplate-blades .sheet-fortune .sheet-title {
+.sheet-rolltemplate-brinkwood .sheet-action .sheet-title,
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-title {
   font-size: 36px;
   line-height: 31px;
   height: 31px;
 }
 
-.sheet-rolltemplate-blades .sheet-vice .sheet-title,
-.sheet-rolltemplate-blades .sheet-resist .sheet-title {
+.sheet-rolltemplate-brinkwood .sheet-vice .sheet-title,
+.sheet-rolltemplate-brinkwood .sheet-resist .sheet-title {
   font-size: 24px;
   line-height: 24px;
   height: 24px;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune .sheet-title {
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-title {
   color: black;
 }
 
-.sheet-rolltemplate-blades .sheet-small-title {
+.sheet-rolltemplate-brinkwood .sheet-small-title {
   font-size: 28px;
 }
 
-.sheet-rolltemplate-blades .sheet-position,
-.sheet-rolltemplate-blades .sheet-effect {
+.sheet-rolltemplate-brinkwood .sheet-position,
+.sheet-rolltemplate-brinkwood .sheet-effect {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
 }
 
-.sheet-rolltemplate-blades .sheet-dice {
+.sheet-rolltemplate-brinkwood .sheet-dice {
   grid-column: span 2;
   height: 27px;
   font-size: 19px;
@@ -3643,68 +3643,68 @@ button[type=roll].sheet-broadcast-button {
   color: white;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune .sheet-dice {
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-dice {
   color: #303032;
 }
 
-.sheet-rolltemplate-blades .sheet-action .sheet-zerodice1 {
+.sheet-rolltemplate-brinkwood .sheet-action .sheet-zerodice1 {
   text-shadow: 0 0 6px #ff9e00;
   color: white;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune .sheet-zerodice1 {
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-zerodice1 {
   text-shadow: 0 0 6px #88dbd7;
   color: #1e1e1e;
 }
 
-.sheet-rolltemplate-blades .sheet-vice .sheet-zerodice1,
-.sheet-rolltemplate-blades .sheet-resist .sheet-zerodice1 {
+.sheet-rolltemplate-brinkwood .sheet-vice .sheet-zerodice1,
+.sheet-rolltemplate-brinkwood .sheet-resist .sheet-zerodice1 {
   text-shadow: 0 0 6px #09c7d0;
   color: white;
 }
 
-.sheet-rolltemplate-blades .sheet-zerodice2 {
+.sheet-rolltemplate-brinkwood .sheet-zerodice2 {
   line-height: 1;
   font-size: 12.5px;
   margin-top: 7px;
   font-style: italic;
 }
 
-.sheet-rolltemplate-blades .sheet-vice .sheet-zerodice2,
-.sheet-rolltemplate-blades .sheet-resist .sheet-zerodice2 {
+.sheet-rolltemplate-brinkwood .sheet-vice .sheet-zerodice2,
+.sheet-rolltemplate-brinkwood .sheet-resist .sheet-zerodice2 {
   text-shadow: 0 0 6px #09c7d0;
   color: #d8e4ef;
 }
 
-.sheet-rolltemplate-blades .sheet-action .sheet-zerodice2 {
+.sheet-rolltemplate-brinkwood .sheet-action .sheet-zerodice2 {
   text-shadow: 0 0 6px #ff9e00;
   color: #ffd8ca;
 }
 
-.sheet-rolltemplate-blades .sheet-fortune .sheet-zerodice2 {
+.sheet-rolltemplate-brinkwood .sheet-fortune .sheet-zerodice2 {
   width: 60%;
   text-shadow: 0 0 6px #88dbd7;
   color: #1e1e1e;
 }
 
-.sheet-rolltemplate-blades .inlinerollresult {
+.sheet-rolltemplate-brinkwood .inlinerollresult {
   border: none !important;
   background-color: transparent;
   font-weight: normal;
   padding: 0 3px 0 0;
 }
 
-.sheet-rolltemplate-blades .sheet-comma:last-child {
+.sheet-rolltemplate-brinkwood .sheet-comma:last-child {
   display: none;
 }
 
-.sheet-rolltemplate-blades .sheet-instructions {
+.sheet-rolltemplate-brinkwood .sheet-instructions {
   grid-column: span 2;
   margin-top: 30px;
   line-height: 1.3;
 }
 
-.sheet-rolltemplate-blades .sheet-resist .sheet-instructions {
+.sheet-rolltemplate-brinkwood .sheet-resist .sheet-instructions {
   color: #d3dde4;
   font-size: 13px;
 }
