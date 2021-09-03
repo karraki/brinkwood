@@ -391,25 +391,6 @@
             <div class="clock"></div>
           </div>
         </div>
-        <div class="experience">
-          <div class="col100 healing-progress" data-i18n="progress_clock"></div>
-          <input class="size" type="hidden" name="attr_recovery_max" value="8"/>
-          <div class="clock-container">
-            <div class="spoke-0 all"></div>
-            <div class="spoke-45 all"></div>
-            <div class="spoke-90 all"></div>
-            <input class="zero input-progress" type="radio" name="attr_recovery" value="0" checked="checked"/><span></span>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="1" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="2" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="3" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="4" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="5" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="6" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="7" data-i18n-title="recoveryblurb"/>
-            <input class="input-progress all" type="radio" name="attr_recovery" value="8" data-i18n-title="recoveryblurb"/>
-            <div class="clock"></div>
-          </div>
-        </div>
       </div>
       <div class="advancement sheet-2col">
         <div class="advancement-header flex blackheader">
@@ -426,35 +407,14 @@
             <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="6"/><span></span>
             <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="7"/><span></span>
             <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="8"/><span></span>
-            <input class="toothhider" type="hidden" name="attr_setting_vampirexp" value="0"/>
-            <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="9"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="10"/><span></span>
           </div>
         </div>
         <ul class="advancement-desc">
           <li data-i18n="xp_desperate"></li>
           <li class="nondot" data-i18n="xp_top"></li>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition"></span>
-              <textarea spellcheck="false" name="attr_xp_condition" data-i18n-placeholder="xp_specific"></textarea>
-            </div>
-          </li>
-          <input class="hider" type="hidden" name="attr_setting_extra_xp" value="0"/>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition_extra"></span>
-              <textarea spellcheck="false" name="attr_xp_condition_extra" data-i18n-placeholder="xp_specific_extra"></textarea>
-            </div>
-          </li>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition2">You expressed your beliefs, drives, heritage, or background.</span>
-              <textarea spellcheck="false" name="attr_xp_condition2">You expressed your beliefs, drives, heritage, or background.</textarea>
-            </div>
-          </li>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition3">You struggled with issues from your vice or traumas during the session.</span>
-              <textarea spellcheck="false" name="attr_xp_condition3">You struggled with issues from your vice or traumas during the session.</textarea>
-            </div>
-          </li>
+          <li data-i18n="xp_beliefs"></li>
+          <li data-i18n="xp_vice"></li>
+          <li data-i18n="xp_relationship"></li>
         </ul>
       </div>
       <div class="teamwork">
@@ -1411,42 +1371,6 @@
             </div>
           </fieldset>
         </div>
-      </div>
-      <div class="advancement def-margin">
-        <div class="advancement-header flex blackheader">
-          <div class="label markxp" data-i18n="mark_xp:"></div>
-          <div class="label" data-i18n="crew_advancement"></div>
-          <div class="xpholder flex">
-            <input class="tooth zero" type="radio" name="attr_crew_xp" value="0" checked="checked"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="1"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="2"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="3"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="4"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="5"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="6"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="7"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="8"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="9"/><span></span>
-            <input class="tooth xptooth" type="radio" name="attr_crew_xp" value="10"/><span></span>
-          </div>
-        </div>
-        <ul class="advancement-desc">
-          <li class="nondot" data-i18n="xp_top"></li>
-          <li>
-            <div class="auto-expand"><span name="attr_crew_xp_condition"></span>
-              <textarea spellcheck="false" name="attr_crew_xp_condition" data-i18n-placeholder="xp_crew_specific"></textarea>
-            </div>
-          </li>
-          <input class="hider" type="hidden" name="attr_setting_extra_xp" value="0"/>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition_extra"></span>
-              <textarea spellcheck="false" name="attr_xp_condition_extra" data-i18n-placeholder="xp_specific_extra"></textarea>
-            </div>
-          </li>
-          <li data-i18n="xp_contend"></li>
-          <li data-i18n="xp_bolster"></li>
-          <li data-i18n="xp_express"></li>
-        </ul>
       </div>
     </div>
     <div class="right-column grid">
