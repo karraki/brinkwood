@@ -1,9 +1,9 @@
 {
-  "html": "blades.html",
-  "css": "blades.css",
-  "authors": "Kenz Arraki",
-  "roll20userid": "",
-  "instructions": "This sheet for Brinkwood is designed to look similar to the paper sheets.",
-  "compendium":"BITD",
-  "legacy": true
+    "html": "blades.html",
+    "css": "blades.css",
+    "authors": "Kenz Arraki",
+    "roll20userid": "",
+    "instructions": "This sheet for Brinkwood is designed to look similar to the paper sheets.",
+    "compendium":"BITD",
+    "legacy": true
 }
