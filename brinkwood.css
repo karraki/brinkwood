@@ -175,19 +175,19 @@
   display: flex;
   margin-right: auto;
   background: #c7c7c7;
-  border: 1px solid #aaa;
-  letter-spacing: 1px;
-  line-height: 20px;
+  border: 0px solid #aaa;
+  letter-spacing: 0px;
+  line-height: 0px;
   justify-content: center;
-  width: 170px;
-  font-size: 11px;
+  width: 0px;
+  font-size: 0px;
   color: #555;
 }
 
 .sheet-type-selector input {
   position: absolute;
-  width: 170px;
-  height: 20px;
+  width: 0px;
+  height: 0px;
 }
 
 .sheet-type-selector:hover {
