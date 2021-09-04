@@ -1467,11 +1467,11 @@ input.sheet-zero {
 }
 
 /* BANS */
-.sheet-bans-coin {
-    grid: auto auto / 63% 16% 21%;
+.sheet-bans {
+  grid: auto;
 }
 
-.sheet-bans {
+.sheet-bans2 {
   position: relative;
   grid-row: 1 / 3;
 }

@@ -248,25 +248,22 @@
           </div>
         </div>
       </div>
-      <div class="bans-coin grid">
-        <div class="bans">
-          <div class="blackheader">
-            <div class="label" data-i18n="bans"></div>
-            <button class="broadcast-button" type="roll" name="roll_Bans" value="&amp;{template:bitd-broadcast} {{charname=@{character_name}}} {{bans=1}} {{bans3=@{bans3}}} {{bans2_1=@{bans2_1}}} {{bans2_2=@{bans2_2}}} {{bans1_1=@{bans1_1}}} {{bans1_2=@{bans1_2}}} {{charimage=@{chat_image}}} @{title_text}" data-i18n-title="send_details_to_chat">:</button>
-          </div>
-          <div class="bansbody">
-            <div class="flex-center bansnumber">3</div>
-            <textarea class="2col" spellcheck="false" name="attr_bans3"></textarea>
-            <div class="flex-center banseffect" data-i18n="bans3_desc"></div>
-            <div class="flex-center bansnumber">2</div>
-            <textarea spellcheck="false" name="attr_bans2_1"></textarea>
-            <textarea spellcheck="false" name="attr_bans2_2"></textarea>
-            <div class="flex-center banseffect" data-i18n="bans2_desc"></div>
-            <div class="flex-center bansnumber">1</div>
-            <textarea spellcheck="false" name="attr_bans1_1"></textarea>
-            <textarea spellcheck="false" name="attr_bans1_2"></textarea>
-            <div class="flex-center banseffect" data-i18n="bans1_desc"></div>
-          </div>
+      <div class="bans grid sheet-2col">
+        <div class="blackheader bans2">
+          <div class="label" data-i18n="bans"></div>
+        </div>
+        <div class="bansbody">
+          <div class="flex-center bansnumber">3</div>
+          <textarea class="2col" spellcheck="false" name="attr_bans3"></textarea>
+          <div class="flex-center banseffect" data-i18n="bans3_desc"></div>
+          <div class="flex-center bansnumber">2</div>
+          <textarea spellcheck="false" name="attr_bans2_1"></textarea>
+          <textarea spellcheck="false" name="attr_bans2_2"></textarea>
+          <div class="flex-center banseffect" data-i18n="bans2_desc"></div>
+          <div class="flex-center bansnumber">1</div>
+          <textarea spellcheck="false" name="attr_bans1_1"></textarea>
+          <textarea spellcheck="false" name="attr_bans1_2"></textarea>
+          <div class="flex-center banseffect" data-i18n="bans1_desc"></div>
         </div>
       </div>
       <div class="advancement sheet-2col">
@@ -358,7 +355,6 @@
           </div>
         </div>
       </div>
-      <textarea class="notes sheet-2col small-margin" spellcheck="false" name="attr_notes" data-i18n-placeholder="notes"></textarea>
     </div>
     <div class="right-column grid">
       <div class="itemcolumn">
@@ -801,6 +797,7 @@
           </div>
         </div>
     </div>
+    <textarea class="notes sheet-2col small-margin" spellcheck="false" name="attr_notes" data-i18n-placeholder="notes"></textarea>
   </div>
 </div>
 <rolltemplate class="sheet-rolltemplate-blades">
