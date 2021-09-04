@@ -2,15 +2,12 @@
 </div>
 <div>
   <input type="hidden" name="attr_stress_max" value="6"/>
-  <input type="hidden" name="attr_trauma_max" value="4"/>
+  <input type="hidden" name="attr_scars_max" value="4"/>
   <input type="hidden" name="attr_oath_max" value="4"/>
   <input type="hidden" name="attr_coin_max" value="4"/>
   <input type="hidden" name="attr_stash_max" value="40"/>
   <input type="hidden" name="attr_playbook_xp_max" value="8"/>
   <input type="hidden" name="attr_rep_max" value="12"/>
-  <input type="hidden" name="attr_turf_max" value="6"/>
-  <input type="hidden" name="attr_heat_max" value="9"/>
-  <input type="hidden" name="attr_wanted_max" value="4"/>
   <input type="hidden" name="attr_changed_attributes" value=""/>
   <input type="hidden" name="attr_bonusdice" value="Bonus dice"/>
   <input type="hidden" name="attr_numberofdice" value=" {{?{Number of dice|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]}}}"/>
@@ -41,11 +38,6 @@
   <input class="hider" type="hidden" name="attr_show_settings" value="0"/>
   <div class="settings">
     <div class="setting-char generaterow">
-      <select name="attr_generate_source_character">
-        <optgroup data-i18n-label="playbooks">
-          <option value="cutter" data-i18n="cutter" selected="selected"></option>
-        </optgroup>
-      </select>
       <label class="generatebutton">
         <input type="checkbox" name="attr_generate_ability" value="1"/><span data-i18n="add_abilities"></span>
       </label>
@@ -68,22 +60,7 @@
     </div>
     <div class="setting-char">
       <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_extra_trauma" value="1"/><span></span><span data-i18n="show_extra_trauma_box"></span>
-      </label>
-    </div>
-    <div class="setting-char">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_vampirexp" value="1"/><span></span><span data-i18n="extra_xp_boxes"></span>
-      </label>
-    </div>
-    <div class="setting-char">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_strictures" value="1"/><span></span><span data-i18n="show_vampire_strictures"></span>
-      </label>
-    </div>
-    <div class="setting-char">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_frame" value="1"/><span></span><span data-i18n="show_frame_section"></span>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_extra_scars" value="1"/><span></span><span data-i18n="show_extra_scars_box"></span>
       </label>
     </div>
     <div class="setting-char">
@@ -91,14 +68,9 @@
         <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_cohort" value="1"/><span></span><span data-i18n="show_cohort_section"></span>
       </label>
     </div>
-    <div class="setting-char setting-crew">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_frienddesc" value="1" checked="checked"/><span></span><span data-i18n="show_friend_contact_details"></span>
-      </label>
-    </div>
     <div class="setting-char">
       <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_bandolier" value="1"/><span></span><span data-i18n="show_bandolier_slots"></span>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_frienddesc" value="1" checked="checked"/><span></span><span data-i18n="show_friend_contact_details"></span>
       </label>
     </div>
     <div class="setting-char">
@@ -108,28 +80,12 @@
     </div>
     <div class="setting-char">
       <label>
-        <input type="text" spellcheck="false" name="attr_setting_trauma_label" value="Scars"/><span data-i18n="trauma_label"></span>
+        <input type="text" spellcheck="false" name="attr_setting_scars_label" value="Scars"/><span data-i18n="scars_label"></span>
       </label>
     </div>
     <div class="setting-char">
       <label>
         <input type="text" spellcheck="false" name="attr_setting_oath_label" value="Oaths"/><span data-i18n="oath_label"></span>
-      </label>
-    </div>
-    <div class="setting-char">
-      <label>
-        <input type="text" spellcheck="false" name="attr_setting_alchemicals_label" value="Alchemicals"/><span data-i18n="alchemicals_label"></span>
-      </label>
-    </div>
-    <div class="setting-char"><span data-i18n="dark_talent"></span><span></span>
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_dark_talent_insight" value="1"/><span></span><span data-i18n="insight"></span>
-      </label>
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_dark_talent_prowess" value="1"/><span></span><span data-i18n="prowess"></span>
-      </label>
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_dark_talent_resolve" value="1"/><span></span><span data-i18n="resolve"></span>
       </label>
     </div>
     <div class="setting-char"><span data-i18n="resistance_bonus"></span>
@@ -161,45 +117,23 @@
     </div>
     <div class="setting-char">
       <label>
-        <select name="attr_setting_traumata_set">
-          <option value="normal" data-i18n="normal" selected="selected"></option>
-        </select><span data-i18n="traumata"></span>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_flexwidth" value="1"/><span></span><span data-i18n="flexible_width"></span>
       </label>
     </div>
     <div class="setting-char">
       <label>
-        <select name="attr_setting_vice_type">
-          <option value="normal" data-i18n="normal" selected="selected"></option>
-        </select><span data-i18n="vice"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_flexwidth" value="1"/><span></span><span data-i18n="flexible_width"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction">
-      <label>
         <input class="checkbox squarebox" type="checkbox" name="attr_setting_focus_shadow" value="1" checked="checked"/><span></span><span data-i18n="show_outline"></span>
       </label>
     </div>
-    <div class="setting-char setting-crew setting-faction">
+    <div class="setting-char">
       <label>
         <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_broadcast" value="1" checked="checked"/><span></span><span data-i18n="show_broadcast"></span>
       </label>
     </div>
-    <div class="setting-char setting-crew">
+    <div class="setting-char">
       <label>
         <input class="checkbox squarebox" type="checkbox" name="attr_setting_autofill" value="1" checked="checked"/><span></span><span data-i18n="fill_fields"></span>
       </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction kirsty-option">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_usekirsty" value="1"/><span></span><span data-i18n="use_kirsty"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew">
-      <input class="wide" type="text" spellcheck="false" name="attr_chat_image" value=""/><span data-i18n="chat_image"></span>
     </div>
     <div class="setting-char custom-actions">
       <label>
@@ -266,7 +200,7 @@
         </label>
         <label class="sheet-2col">
           <input type="text" spellcheck="false" name="attr_name"/>
-          <div class="label text title" data-i18n="assocbonds"></div>
+          <div class="label text title" data-i18n="bonds"></div>
         </label>
       </div>
       <div class="stress flex sheet-2col">
@@ -284,21 +218,21 @@
         </div>
         <div class="stress3">
           <div class="blackheader">
-            <div class="label"><span name="attr_setting_trauma_label"></span></div>
+            <div class="label"><span name="attr_setting_scars_label"></span></div>
           </div>
-          <div class="traumaholder flex">
-            <input class="tooth zero" type="radio" name="attr_trauma" value="0" checked="checked"/><span></span>
-            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="1"/><span></span>
-            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="2"/><span></span>
-            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="3"/><span></span>
-            <input class="tooth regulartooth" type="radio" name="attr_trauma" value="4"/><span></span>
+          <div class="scarsholder flex">
+            <input class="tooth zero" type="radio" name="attr_scars" value="0" checked="checked"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_scars" value="1"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_scars" value="2"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_scars" value="3"/><span></span>
+            <input class="tooth regulartooth" type="radio" name="attr_scars" value="4"/><span></span>
           </div>
         </div>
         <div class="stress3">
           <div class="blackheader">
             <div class="label"><span name="attr_setting_oath_label"></span></div>
           </div>
-          <div class="traumaholder flex">
+          <div class="scarsholder flex">
             <input class="tooth zero" type="radio" name="attr_oath" value="0" checked="checked"/><span></span>
             <input class="tooth regulartooth" type="radio" name="attr_oath" value="1"/><span></span>
             <input class="tooth regulartooth" type="radio" name="attr_oath" value="2"/><span></span>
@@ -331,7 +265,6 @@
           <div class="label markxp" data-i18n="mark_xp:"></div>
           <div class="label" data-i18n="advancement"></div>
           <div class="xpholder flex">
-            <input class="vampirexp" type="hidden" name="attr_setting_vampirexp" value="0"/>
             <input class="tooth zero" type="radio" name="attr_playbook_xp" value="0" checked="checked"/><span></span>
             <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="1"/><span></span>
             <input class="tooth xptooth" type="radio" name="attr_playbook_xp" value="2"/><span></span>
@@ -1002,7 +935,7 @@
           "gatherinfo6",
           "playbook_description",
           "setting_stress_label",
-          "setting_trauma_label",
+          "setting_scars_label",
           "special_abilities_title",
           "xp_condition",
           "xp_condition2",
@@ -1049,7 +982,7 @@
       return [x.name.toLowerCase(), x.description];
     }));
     [
-      crewData, playbookData, factionsData, actionData, traumaData, itemData,
+      crewData, playbookData, factionsData, actionData, scarsData, itemData,
       translatedDefaults, defaultValues, spiritPlaybooks, alchemicalData,
     ].forEach(x => Object.freeze(x));
     return [playbookAbilityMap, crewAbilityMap];
@@ -1199,17 +1132,17 @@
       setAttr("vice_formula", buildRollFormula(total));
     });
   }
-  function calculateTrauma(event) {
+  function calculateScars(event) {
     getAttrs([
       "setting_traumata_set",
-      ...traumaDataFlat.map(x => `trauma_${x}`)
+      ...scarsDataFlat.map(x => `scars_${x}`)
     ], v => {
-      const traumaType = v.setting_traumata_set === "0" ? "normal"
+      const scarsType = v.setting_traumata_set === "0" ? "normal"
         : v.setting_traumata_set;
-      if (traumaData[traumaType] && event.sourceType === "player") {
-        const newTrauma = traumaData[traumaType]
-          .reduce((m, name) => m + (parseInt(v[`trauma_${name}`]) || 0), 0);
-        setAttr("trauma", newTrauma);
+      if (scarsData[scarsType] && event.sourceType === "player") {
+        const newScars = scarsData[scarsType]
+          .reduce((m, name) => m + (parseInt(v[`scars_${name}`]) || 0), 0);
+        setAttr("scars", newScars);
       }
     });
   }
@@ -1648,7 +1581,7 @@
       "sway"
     ]
   };
-  const traumaData = {
+  const scarsData = {
   };
   const itemData = [
     {
@@ -1776,7 +1709,7 @@
     setting_deity_label: "deity",
     setting_heat_label: "heat",
     setting_stress_label: "stress",
-    setting_trauma_label: "trauma",
+    setting_scars_label: "scars",
     setting_wanted_label: "wanted",
     special_abilities_title: "special_abilities",
     upgrade_carriage_name: "carriage",
@@ -1848,14 +1781,13 @@
     setting_show_origin: "0",
     setting_show_strictures: "0",
     setting_traumata_set: "normal",
-    setting_vampirexp: "0",
     setting_vice_type: "normal",
     skirmish: "0",
     study: "0",
     survey: "0",
     sway: "0",
     tinker: "0",
-    trauma: "0",
+    scars: "0",
     upgrade_hidden_check_1: "0",
     upgrade_secure_check_1: "0",
     upgrade_insight_check_1: "0",
@@ -1893,8 +1825,8 @@
     [...new Set(crewAttributes.concat(playbookAttributes))];
   const actionsFlat =
     [].concat(...Object.keys(actionData).map(x => actionData[x]));
-  const traumaDataFlat = Object.keys(traumaData)
-    .reduce((m, k) => m.concat(traumaData[k]), []);
+  const scarsDataFlat = Object.keys(scarsData)
+    .reduce((m, k) => m.concat(scarsData[k]), []);
   const autoExpandFields = [
     "repeating_ability:name",
     "repeating_ability:description",
@@ -1964,17 +1896,17 @@
   /* Calculate stash */
   on("change:stash", calculateStashFormula);
   on("change:wanted", calculateWantedFormula);
-  /* Calculate trauma */
+  /* Calculate scars */
   on("change:setting_traumata_set " +
-    traumaDataFlat.map(x => `change:trauma_${x}`).join(" "), calculateTrauma);
+    scarsDataFlat.map(x => `change:scars_${x}`).join(" "), calculateScars);
   /* Generate buttons */
   on("change:generate_factions", generateFactions);
   autogenSections.forEach(handleRepeatingGenerateButton);
-  /* Extra stress and trauma */
+  /* Extra stress and scars */
   on("change:setting_extra_stress", event =>
     setAttr("stress_max", 9 + (parseInt(event.newValue) || 0)));
-  on("change:setting_extra_trauma", event =>
-    setAttr("trauma_max", 4 + (parseInt(event.newValue) || 0)));
+  on("change:setting_extra_scars", event =>
+    setAttr("scars_max", 4 + (parseInt(event.newValue) || 0)));
   /* Calculate cohort quality */
   on(
     ["crew_tier", "cohort1_impaired", "cohort1_type"]

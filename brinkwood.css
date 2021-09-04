@@ -1232,7 +1232,7 @@ div[class^="sheet-spoke"] {
   background: red;
 }
 
-/* TEXT INPUTS FOR TRAUMA AND CLOCKS */
+/* TEXT INPUTS FOR STRESS AND CLOCKS */
 .sheet-text-button {
   font-weight: bold;
 }
@@ -1843,7 +1843,7 @@ input.sheet-zero {
   display: none;
 }
 
-.sheet-traumaholder, .sheet-wantedholder {
+.sheet-stressholder, .sheet-wantedholder {
   height: 13px;
   padding-left: 2px;
 }
