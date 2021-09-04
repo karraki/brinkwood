@@ -194,17 +194,15 @@
   color: red;
 }
 
-.sheet-type-selector .sheet-3waybox:not(:checked) + .sheet-3waybox,
+.sheet-type-selector .sheet-2waybox:not(:checked) + .sheet-2waybox,
 .sheet-type-selector input[value="character"]:not(:checked) ~ span[data-i18n="character_mode"],
-.sheet-type-selector input[value="crew"]:not(:checked) ~ span[data-i18n="crew_mode"],
-.sheet-type-selector input[value="faction"][type=radio]:not(:checked) ~ span[data-i18n="faction_mode"] {
+.sheet-type-selector input[value="mask"][type=radio]:not(:checked) ~ span[data-i18n="mask_mode"] {
   display: none;
 }
 
 /* SETTINGS */
 .sheet-type[value="character"] ~ .sheet-settings > :not(.sheet-setting-char),
-.sheet-type[value="crew"] ~ .sheet-settings > :not(.sheet-setting-crew),
-.sheet-type[value="faction"] ~ .sheet-settings > :not(.sheet-setting-faction) {
+.sheet-type[value="mask"] ~ .sheet-settings > :not(.sheet-setting-mask) {
   display: none;
 }
 
@@ -303,12 +301,11 @@
 }
 
 .sheet-type:not([value="character"]) ~ .sheet-type-character,
-.sheet-type:not([value="crew"]) ~ .sheet-type-crew,
-.sheet-type:not([value="faction"]) ~ .sheet-type-faction {
+.sheet-type:not([value="mask"]) ~ .sheet-type-mask {
   display: none;
 }
 
-.sheet-type-character, .sheet-type-crew, .sheet-type-faction {
+.sheet-type-character, .sheet-type-mask {
   grid: auto/55% calc(45% - 5px);
   grid-gap: 10px 5px;
 }
@@ -686,7 +683,7 @@ textarea.sheet-smallcaps {
   background-repeat: no-repeat;
 }
 
-.sheet-crewheader {
+.sheet-maskheader {
   color: #808080;
   font-size: 28px;
   align-self: flex-start;
@@ -837,11 +834,11 @@ textarea.sheet-smallcaps {
   width: calc(36% + 6px);
 }
 
-.sheet-type-crew .sheet-playbook input[type=text] {
+.sheet-type-mask .sheet-playbook input[type=text] {
   width: calc(74% - 7px);
 }
 
-.sheet-type-crew .sheet-playbook textarea {
+.sheet-type-mask .sheet-playbook textarea {
   width: calc(26% + 3px);
 }
 
@@ -1054,240 +1051,6 @@ div[class^="sheet-spoke"] {
   font-family: "Times New Roman", Times, serif;
   align-content: space-evenly;
   flex-wrap: wrap;
-}
-
-/* Faction clocks */
-.sheet-clocks-only[value="0"] ~ .sheet-container .sheet-type-faction .sheet-clocks .repcontainer {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.sheet-clocks-only[value="1"] ~ .sheet-container .sheet-type-faction .sheet-clocks .repcontainer {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.sheet-clocks-only[value="1"] ~ .sheet-container .sheet-type-faction {
-  grid: auto / auto;
-}
-
-.sheet-clocks-only[value="1"] ~ .sheet-container .sheet-type-faction .sheet-factiontitle, .sheet-clocks-only[value="1"] ~ .sheet-container .sheet-type-faction .sheet-factions, .sheet-clocks-only[value="1"] ~ .sheet-container .sheet-type-faction .sheet-notes {
-  display: none;
-}
-
-.sheet-size[value="4"] ~ .sheet-clock-container input:not(.sheet-zero) {
-  height: 20px;
-  width: 20px;
-}
-
-.sheet-size[value="4"] ~ .sheet-clock-container input[value="1"] {
-  margin-left: 20px;
-}
-
-.sheet-size[value="4"] ~ .sheet-clock-container input[value="2"] {
-  margin: 20px 0 0 20px;
-}
-
-.sheet-size[value="4"] ~ .sheet-clock-container input[value="3"] {
-  margin-top: 20px;
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input:not(.sheet-zero) {
-  height: 17px;
-  width: 12px;
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="1"] {
-  margin-left: 21px;
-  transform: rotate(30deg);
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="2"] {
-  margin: 12px 0 0 25px;
-  transform: rotate(90deg);
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="3"] {
-  margin: 22px 0 0 21px;
-  transform: rotate(150deg);
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="4"] {
-  margin: 22px 0 0 8px;
-  transform: rotate(210deg);
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="5"] {
-  margin: 12px 0 0 1px;
-  transform: rotate(270deg);
-}
-
-.sheet-size[value="6"] ~ .sheet-clock-container input[value="6"] {
-  margin-left: 8px;
-  transform: rotate(330deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input:not(.sheet-zero) {
-  height: 14px;
-  width: 10px;
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="1"] {
-  margin-left: 20px;
-  transform: rotate(22.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="2"] {
-  margin: 8px 0 0 26px;
-  transform: rotate(67.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="3"] {
-  margin: 18px 0 0 26px;
-  transform: rotate(112.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="4"] {
-  margin: 25px 0 0 20px;
-  transform: rotate(157.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="5"] {
-  margin: 25px 0 0 9px;
-  transform: rotate(202.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="6"] {
-  margin: 18px 0 0 2px;
-  transform: rotate(247.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="7"] {
-  margin: 8px 0 0 2px;
-  transform: rotate(292.5deg);
-}
-
-.sheet-size[value="8"] ~ .sheet-clock-container input[value="8"] {
-  margin-left: 9px;
-  transform: rotate(337.5deg);
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input:not(.sheet-zero) {
-  height: 14px;
-  width: 9px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="1"] {
-  transform: rotate(18deg);
-  margin-left: 20px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="2"] {
-  transform: rotate(54deg);
-  margin: 5px 0 0 27px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="3"] {
-  transform: rotate(90deg);
-  margin: 13px 0 0 30px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="4"] {
-  transform: rotate(126deg);
-  margin: 21px 0 0 27px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="5"] {
-  transform: rotate(162deg);
-  margin: 26px 0 0 20px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="6"] {
-  transform: rotate(198deg);
-  margin: 26px 0 0 12px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="7"] {
-  transform: rotate(234deg);
-  margin: 21px 0 0 5px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="8"] {
-  transform: rotate(270deg);
-  margin: 13px 0 0 1px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="9"] {
-  transform: rotate(306deg);
-  margin: 5px 0 0 5px;
-}
-
-.sheet-size[value="10"] ~ .sheet-clock-container input[value="10"] {
-  transform: rotate(342deg);
-  margin-left: 12px;
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input:not(.sheet-zero) {
-  height: 12px;
-  width: 8px;
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="1"] {
-  margin-left: 20px;
-  transform: rotate(15deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="2"] {
-  margin: 4px 0 0 26px;
-  transform: rotate(45deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="3"] {
-  margin: 10px 0 0 29px;
-  transform: rotate(75deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="4"] {
-  margin: 18px 0 0 29px;
-  transform: rotate(105deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="5"] {
-  margin: 24px 0 0 26px;
-  transform: rotate(135deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="6"] {
-  margin: 28px 0 0 20px;
-  transform: rotate(165deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="7"] {
-  margin: 28px 0 0 12px;
-  transform: rotate(195deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="8"] {
-  margin: 24px 0 0 6px;
-  transform: rotate(225deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="9"] {
-  margin: 18px 0 0 3px;
-  transform: rotate(255deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="10"] {
-  margin: 10px 0 0 3px;
-  transform: rotate(295deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="11"] {
-  margin: 4px 0 0 6px;
-  transform: rotate(315deg);
-}
-
-.sheet-size[value="12"] ~ .sheet-clock-container input[value="12"] {
-  margin-left: 12px;
-  transform: rotate(345deg);
 }
 
 /* End positioning */
@@ -1876,43 +1639,8 @@ input.sheet-zero {
   position: relative;
 }
 
-/* CREW COIN */
-.sheet-crewcoin-coins {
-  padding: 4px 0 0 3px;
-  position: relative;
-}
-
-.sheet-crewcoin-desc {
-  font-size: 10px;
-  line-height: 14px;
-  padding-left: 3px;
-  font-style: italic;
-}
-
-.sheet-crewcoinbar {
-  border-left: 1px solid #c7c7c7;
-  height: 15px;
-  width: 3px;
-  margin: -1px auto 0;
-}
 
 /* LEFT-FILLED RADIO BOXES */
-.sheet-crewcoin input.sheet-radiobox {
-  width: 12px;
-  height: 12px;
-  margin-right: -12px;
-}
-
-.sheet-crewcoin .sheet-radiobox + span {
-  width: 11px;
-  height: 11px;
-  margin-right: auto;
-}
-
-.sheet-crewcoin input:checked ~ .sheet-radiobox.sheet-vaultcoin + span {
-  border-color: #c7c7c7;
-}
-
 .sheet-coin-and-stash input.sheet-radiobox {
   width: 13px;
   height: 13px;
@@ -2111,15 +1839,8 @@ input.sheet-zero {
   justify-content: space-between;
 }
 
-.sheet-stress4 .sheet-input:not([value="normal"]) ~ .sheet-normal,
-.sheet-stress4 .sheet-input:not([value="ghost"]) ~ .sheet-ghost,
-.sheet-stress4 .sheet-input:not([value="hull"]) ~ .sheet-hull,
-.sheet-stress4 .sheet-input:not([value="vampire"]) ~ .sheet-vampire {
+.sheet-stress4 .sheet-input:not([value="normal"]) ~ .sheet-normal {
   display: none;
-}
-
-.sheet-stress4 .sheet-ghost, .sheet-stress4 .sheet-hull {
-  letter-spacing: 1px;
 }
 
 .sheet-traumaholder, .sheet-wantedholder {
@@ -2134,18 +1855,6 @@ input.sheet-zero {
 .sheet-rep2 {
   width: 134px;
   position: relative;
-}
-
-.sheet-turfbox {
-  display: flex;
-  position: absolute;
-  flex-flow: row-reverse;
-  z-index: 2;
-  width: 100%;
-}
-
-.sheet-turfzero-holder {
-  margin-left: 2px;
 }
 
 .sheet-hold > div,
@@ -2178,10 +1887,6 @@ input.sheet-zero {
 
 .sheet-extra-teeth:checked + .sheet-tooth ~ .sheet-tooth, .sheet-extra-teeth:checked + .sheet-tooth + span ~ span {
   display: none;
-}
-
-.sheet-vampirexp[value="1"] ~ .sheet-xptooth + span {
-  margin-right: 2px;
 }
 
 .sheet-xpholder .sheet-vampirexp[value="0"] ~ .sheet-tooth[value="8"] + span,
@@ -2718,124 +2423,6 @@ input[value="1"] + .sheet-claimbox {
   content: ":";
 }
 
-/* ALCHEMICALS */
-.sheet-title-checkbox ~ div {
-  height: auto;
-  transition: all 0.2s;
-  overflow: hidden;
-}
-
-.sheet-title-checkbox:not(:checked) ~ div {
-  height: 0;
-}
-
-input.sheet-title-checkbox {
-  width: 100%;
-  vertical-align: top;
-  margin-right: -100%;
-  height: 24px;
-}
-
-.sheet-title-checkbox:hover + span {
-  color: red;
-}
-
-.sheet-alchemicals {
-  padding: 0 5px;
-  line-height: 16px;
-}
-
-.sheet-bandolier-desc {
-  line-height: 12px;
-  margin-top: 2px;
-  font-size: 10px;
-  font-style: italic;
-}
-
-.sheet-bandoliers-name {
-  margin-right: 7px;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.sheet-bandolier input:nth-of-type(3) + span {
-  margin-right: 8px;
-}
-
-.sheet-alchemicals .repcontainer {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.sheet-alchemicals .repitem {
-  font-size: 11px;
-  width: 50%;
-}
-
-.sheet-alchemicals .sheet-auto-expand {
-  margin: 0 1px 0 7px;
-  padding: 1px;
-  min-height: 16px;
-  line-height: 14px;
-  width: calc(100% - 8px);
-}
-
-.sheet-alchemicals input.sheet-alchemicals-expand {
-  width: 10px;
-  position: absolute;
-  height: 16px;
-}
-
-.sheet-alchemicals .sheet-alchemicals-expand + span {
-  transform: rotate(45deg) scale(0.9);
-  position: absolute;
-}
-
-.sheet-alchemicals .sheet-alchemicals-expand:not(:checked) ~ .sheet-alchemicals-info {
-  display: none;
-}
-
-.sheet-alchemicals .sheet-alchemicals-info {
-  position: relative;
-  font-size: 9px;
-  z-index: 2;
-  background: white;
-  line-height: 1.3;
-  height: 64px;
-  width: 200%;
-  padding: 2px;
-  border: 1px solid #d8d8d8;
-}
-
-.sheet-alchemicals .repitem:nth-child(even) .sheet-alchemicals-info {
-  left: -100%;
-}
-
-.sheet-alchemicals .sheet-alchemicals-expand + span::before {
-  content: '■';
-  font-family: serif;
-}
-
-.sheet-alchemicals .sheet-alchemicals-expand:checked + span {
-  color: red;
-}
-
-.sheet-alchemicals .itemcontrol .btn {
-  padding: 0 4px;
-  font-size: 9px;
-  line-height: 14px;
-}
-
-.sheet-alchemicals .repcontrol_del {
-  order: 1;
-}
-
-.sheet-alchemicals .repcontainer.editmode .repitem .itemcontrol {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
 /* FRAME */
 .sheet-frame textarea {
   font-size: 11px;
@@ -3070,71 +2657,6 @@ button[type=roll].sheet-broadcast-button {
   top: 1px;
 }
 
-/* Kirsty */
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-specialheader,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-blackheader,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-greyheader,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-black-on-grey,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-playbook input[type="text"],
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-plainheader,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-itemheader :first-child,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-loadheader :first-child,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-attribute-title button[type=roll].sheet-rollbutton,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-bonusdie > .sheet-label:first-child,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-cohort-title,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-claimbox .sheet-label,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-lairbox,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-crewheader,
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-factiontitle input[type="text"],
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-factions-header input[type="text"] {
-  font-family: Kirsty, Georgia, serif;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-claimbox .sheet-label {
-  font-size: 10px;
-  font-weight: 400;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-specialheader, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-itemheader :first-child, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-loadheader :first-child {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-plainheader, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-cohort-title {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-factions-header input[type="text"],
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-bonusdie > .sheet-label:first-child {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-attribute-title button[type=roll].sheet-rollbutton, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-lairbox {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-crewheader {
-  font-size: 29px;
-  letter-spacing: 0;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-factiontitle input[type="text"] {
-  font-size: 32px;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-playbook input[type="text"] {
-  font-size: 40px;
-  letter-spacing: 0;
-}
-
-.sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-blackheader .sheet-label, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-blackheader button[type="roll"].sheet-label, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-greyheader .sheet-label, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-greyheader button[type="roll"].sheet-label, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-black-on-grey .sheet-label, .sheet-use-kirsty[value="1"] ~ .sheet-container .sheet-black-on-grey button[type="roll"].sheet-label {
-  font-size: 12px;
-  font-weight: 400;
-}
-
 /* Custom action/attribute labels */
 .sheet-settings .sheet-custom-actions {
   width: 100%;
@@ -3167,300 +2689,6 @@ button[type=roll].sheet-broadcast-button {
 .sheet-custom-action-toggle[value="0"] ~ .sheet-container .sheet-custom-label,
 .sheet-custom-action-toggle[value="1"] ~ .sheet-container .sheet-default-label {
   display: none;
-}
-
-/* Adjustments for non-English languages */
-.charsheet.lang-ko {
-  font-family: "Malgun Gothic", Dotum, Georgia, "Bitstream Charter", "Times New Roman", serif;
-}
-
-.charsheet.lang-ko .sheet-kirsty-option {
-  display: none;
-}
-
-.charsheet.lang-ko .sheet-settings label.sheet-generatebutton {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-settings > div {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-header .sheet-title {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-header .sheet-info {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-header .sheet-smallcaps {
-  font-size: 1em;
-}
-
-.charsheet.lang-ko .sheet-header .sheet-italic {
-  font-style: normal;
-}
-
-.charsheet.lang-ko .sheet-stress4 {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-harmrow .sheet-harmeffect {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-healing-progress {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-armor label {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-coinrow .sheet-label, .charsheet.lang-ko .sheet-coinrow button[type="roll"].sheet-rollbutton {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-specialheader {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-abilityname {
-  font-size: 14px;
-}
-
-.charsheet.lang-ko .sheet-abilitydesc {
-  font-family: 13px;
-  line-height: 16px;
-  min-height: 36px;
-}
-
-.charsheet.lang-ko .sheet-plainheader {
-  font-size: 14px;
-}
-
-.charsheet.lang-ko .sheet-teamworkbox {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-gatherinfo li {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-strictures {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-playbook textarea {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-loadheader .sheet-loadnumber {
-  font-family: inherit;
-}
-
-.charsheet.lang-ko .sheet-loadheader label {
-  font-style: normal;
-}
-
-.charsheet.lang-ko .sheet-itemheader, .charsheet.lang-ko .sheet-loadheader {
-  font-size: 12px;
-  padding: 1px 2px 0 4px;
-  height: auto;
-}
-
-.charsheet.lang-ko .sheet-numboxes-chooser {
-  font-size: 10px;
-}
-
-.charsheet.lang-ko .sheet-item .sheet-itemname, .charsheet.lang-ko .sheet-item .sheet-label {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-item .sheet-label.sheet-upgradecosts {
-  font-size: 9px;
-}
-
-.charsheet.lang-ko .sheet-itemholder .sheet-expand ~ textarea {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-bandoliers-name {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-bandolier-desc {
-  font-size: 11px;
-  font-style: normal;
-}
-
-.charsheet.lang-ko .sheet-attribute-title button[type="roll"].sheet-rollbutton {
-  font-size: 15px;
-}
-
-.charsheet.lang-ko .sheet-action button[type="roll"].sheet-rollbutton {
-  font-size: 15px;
-}
-
-.charsheet.lang-ko button[type="roll"].sheet-borderbutton {
-  font-size: 15px;
-}
-
-.charsheet.lang-ko .sheet-bonusdietext, .charsheet.lang-ko .sheet-bonusdie .sheet-label {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-friend-contact .sheet-auto-expand {
-  font-size: 13px;
-}
-
-.charsheet.lang-ko .sheet-clocks .sheet-auto-expand {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-crewcoin-desc {
-  font-style: normal;
-}
-
-.charsheet.lang-ko .sheet-claimbox textarea.sheet-label {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-claimbox textarea.sheet-claim-desc {
-  overflow: hidden;
-  height: 54px;
-  line-height: 12px;
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-claimbox, .charsheet.lang-ko .sheet-lairbox {
-  height: 84px;
-}
-
-.charsheet.lang-ko .sheet-cohort-title {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-cohort-info {
-  height: 15px;
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-cohort-condition-name {
-  font-size: 12px;
-}
-
-.charsheet.lang-ko .sheet-cohort-edgeflaw {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-cohort-description {
-  font-size: 11px;
-}
-
-.charsheet.lang-ko .sheet-factions-header span {
-  font-size: 9px;
-}
-
-.charsheet.lang-ko .sheet-faction-name, .charsheet.lang-ko input[type=text].sheet-faction-name {
-  width: 60%;
-}
-
-.charsheet.lang-ko .sheet-faction-tier, .charsheet.lang-ko input[type=text].sheet-faction-tier {
-  width: 12%;
-}
-
-.charsheet.lang-ko .sheet-faction-hold, .charsheet.lang-ko input[type=text].sheet-faction-hold {
-  width: 13%;
-}
-
-.charsheet.lang-fr .sheet-abilityname {
-  min-height: 34px;
-}
-
-.charsheet.lang-fr .sheet-heat {
-  width: 48%;
-}
-
-.charsheet.lang-fr .sheet-heat .sheet-blackheader {
-  letter-spacing: 0;
-}
-
-.charsheet.lang-fr .sheet-crewcoin {
-  width: 51%;
-}
-
-.charsheet.lang-es .sheet-crewheader {
-  font-size: 24px;
-}
-
-.charsheet.lang-es .sheet-playbook input[type=text] {
-  font-size: 32px;
-}
-
-.charsheet.lang-es .sheet-itemheader .sheet-italic {
-  line-height: 10px;
-}
-
-.charsheet.lang-es .sheet-coinrow button[type=roll].sheet-rollbutton {
-  padding: 2px 0 0 6px;
-}
-
-.charsheet.lang-es .sheet-harmbody .sheet-harmeffect {
-  font-size: 9px;
-  letter-spacing: 0;
-}
-
-.charsheet.lang-es .sheet-armor .sheet-label {
-  font-size: 10px;
-}
-
-.charsheet.lang-es .sheet-coinrow .sheet-label,
-.charsheet.lang-es .sheet-coinrow button[type=roll].sheet-rollbutton {
-  font-size: 10px;
-}
-
-.charsheet.lang-pt .sheet-crewheader {
-  font-size: 24px;
-}
-
-.charsheet.lang-pt .sheet-heat3 button[type=roll].sheet-rollbutton {
-  max-width: 56px;
-}
-
-.charsheet.lang-pt .sheet-healing .sheet-healing-progress {
-  line-height: 10px;
-}
-
-.charsheet.lang-pt .sheet-playbook input[type=text] {
-  font-size: 32px;
-}
-
-.charsheet.lang-pt .sheet-coinrow button[type=roll].sheet-rollbutton {
-  padding: 2px 0 0 6px;
-}
-
-.charsheet.lang-pt .sheet-advancement-header {
-  font-size: 10px;
-}
-
-.charsheet.lang-pt .sheet-itemheader .sheet-italic {
-  line-height: 10px;
-}
-
-.charsheet.lang-pt .sheet-harmbody .sheet-harmeffect {
-  font-size: 9px;
-  letter-spacing: 0;
-}
-
-.charsheet.lang-pt .sheet-armor .sheet-label {
-  font-size: 10px;
-}
-
-.charsheet.lang-pt .sheet-coinrow .sheet-label,
-.charsheet.lang-pt .sheet-coinrow button[type=roll].sheet-rollbutton {
-  font-size: 10px;
 }
 
 /* Colors */
