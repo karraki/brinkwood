@@ -1232,7 +1232,7 @@ div[class^="sheet-spoke"] {
   background: red;
 }
 
-/* TEXT INPUTS FOR STRESS AND CLOCKS */
+/* TEXT INPUTS FOR TRAUMA AND CLOCKS */
 .sheet-text-button {
   font-weight: bold;
 }
@@ -1381,6 +1381,25 @@ input.sheet-zero {
   top: 13px;
 }
 
+/* TURF RADIOS */
+.sheet-turfbox input[type=radio] {
+  height: 12px;
+  width: calc(100%/12);
+}
+
+.sheet-turf-input[value="1"] ~ input[type=radio].sheet-turf1 + span,
+.sheet-turf-input[value="2"] ~ input[type=radio].sheet-turf2 + span,
+.sheet-turf-input[value="3"] ~ input[type=radio].sheet-turf3 + span,
+.sheet-turf-input[value="4"] ~ input[type=radio].sheet-turf4 + span,
+.sheet-turf-input[value="5"] ~ input[type=radio].sheet-turf5 + span,
+.sheet-turf-input[value="6"] ~ input[type=radio].sheet-turf6 + span {
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-black.png");
+}
+
+.sheet-tooth:checked ~ .sheet-stresstooth.sheet-turf6 + span {
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-halfgrey.png");
+}
+
 /* SPECIAL ABILITIES*/
 .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-friends .sheet-expand, .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-friends .sheet-expand + span, .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-friends .sheet-description, .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-contacts .sheet-expand, .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-contacts .sheet-expand + span, .sheet-show-frienddesc[value='0'] ~ .sheet-container .sheet-contacts .sheet-description {
   display: none;
@@ -1466,17 +1485,17 @@ input.sheet-zero {
   padding: 2px 0 2px 3px;
 }
 
-/* BANS */
-.sheet-bans {
+/* HARM */
+.sheet-harm {
   grid: auto;
 }
 
-.sheet-bans2 {
+.sheet-harm2 {
   position: relative;
   grid-row: 1 / 3;
 }
 
-.sheet-bansbody {
+.sheet-harmbody {
   display: grid;
   grid: 52px / 12px auto auto 80px;
   font-weight: 800;
@@ -1484,12 +1503,12 @@ input.sheet-zero {
   text-align: center;
 }
 
-.sheet-bansbody div {
+.sheet-harmbody div {
   background: #d6d8d9;
   border-bottom: 1px solid black;
 }
 
-.sheet-bansbody .sheet-banseffect {
+.sheet-harmbody .sheet-harmeffect {
   width: 80px;
   color: #555;
   font-size: 10px;
@@ -1497,16 +1516,16 @@ input.sheet-zero {
   line-height: 1.4;
 }
 
-.sheet-bansbody .sheet-bansnumber {
+.sheet-harmbody .sheet-harmnumber {
   line-height: 1;
   font-size: 13px;
 }
 
-.sheet-bansbody .sheet-2col {
+.sheet-harmbody .sheet-twocols {
   grid-column: span 2;
 }
 
-.sheet-bansbody textarea {
+.sheet-harmbody textarea {
   font-size: 12px;
   padding: 10px 4px 3px;
   color: #c43c35;
@@ -1518,7 +1537,7 @@ input.sheet-zero {
   border-bottom: 1px solid black;
 }
 
-.sheet-bansbody textarea + textarea {
+.sheet-harmbody textarea + textarea {
   border-left: 1px solid #d8d8d8;
 }
 
@@ -1824,7 +1843,7 @@ input.sheet-zero {
   display: none;
 }
 
-.sheet-stressholder, .sheet-wantedholder {
+.sheet-traumaholder, .sheet-wantedholder {
   height: 13px;
   padding-left: 2px;
 }
@@ -2410,6 +2429,130 @@ input[value="1"] + .sheet-claimbox {
   height: 40px;
 }
 
+/* FACTIONS PAGE */
+.sheet-factions {
+  grid: auto auto/repeat(4, 1fr);
+  grid-gap: 5px 10px;
+}
+
+.sheet-factions .sheet-2row {
+  grid-row: span 2;
+}
+
+.sheet-factiontitle {
+  align-items: center;
+}
+
+.sheet-factiontitle input[type=text] {
+  font-size: 26px;
+  margin-right: auto;
+  width: 60%;
+}
+
+.sheet-factions-header {
+  width: 100%;
+  height: 24px;
+  align-items: center;
+  line-height: 14px;
+  background: #c7c7c7;
+}
+
+.sheet-factions-header input[type=text] {
+  padding-left: 3px;
+}
+
+.sheet-factions-header span {
+  font-size: 7px;
+}
+
+input.sheet-expand, .sheet-expand + span {
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  font-size: 8px;
+}
+
+.sheet-type-faction .sheet-expand {
+  left: -7px;
+  top: 6px;
+}
+
+.sheet-type-faction .sheet-expand + span {
+  top: 3px;
+  left: -7px;
+}
+
+.sheet-type-faction .sheet-expand + span::before {
+  content: "▶";
+}
+
+.sheet-type-faction .sheet-expand:checked + span::before {
+  content: "▼";
+}
+
+.sheet-faction {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.sheet-faction textarea {
+  border-top: 1px solid #d8d8d8;
+  font-size: 11px;
+  line-height: 1.5;
+  height: 51px;
+}
+
+.sheet-faction input[type=number] {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 12px;
+}
+
+.sheet-faction input[type=text] {
+  border-right: 1px solid #d8d8d8;
+  font-size: 12px;
+  padding: 2px 1px;
+}
+
+.sheet-expand:not(:checked) ~ textarea {
+  height: 0 !important;
+  border-width: 0;
+}
+
+/* Column widths */
+.sheet-faction-name, input[type=text].sheet-faction-name {
+  width: 65%;
+}
+
+.sheet-faction-tier, input[type=text].sheet-faction-tier {
+  width: 10%;
+  text-align: center;
+}
+
+.sheet-faction-hold, input[type=text].sheet-faction-hold {
+  width: 10%;
+  text-align: center;
+}
+
+.sheet-faction-status, input[type=number].sheet-faction-status {
+  width: 15%;
+  text-align: center;
+}
+
+/* War blurb */
+.sheet-warblurb {
+  text-align: justify;
+}
+
+.sheet-warblurb .sheet-label {
+  font-size: 14px;
+}
+
+.sheet-warblurb li {
+  margin-bottom: .5em;
+  padding-left: 1em;
+}
+
 /* Generate button */
 label.sheet-generatebutton {
   color: #777;
@@ -2505,7 +2648,7 @@ button[type=roll].sheet-broadcast-button {
   bottom: 2px;
 }
 
-.sheet-bans button[type=roll].sheet-broadcast-button {
+.sheet-harm button[type=roll].sheet-broadcast-button {
   color: white;
   font-weight: normal;
   font-size: 11px;
@@ -2917,48 +3060,48 @@ button[type=roll].sheet-broadcast-button {
   color: #ccc;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm {
   color: white;
   width: 100%;
   margin: 18px 0 0;
   border: 1px solid white;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans td {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm td {
   text-align: center;
   padding: 5px;
   border: 1px solid white;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans td:first-child {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm td:first-child {
   width: 10px;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans td:nth-child(2n+1) {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm td:nth-child(2n+1) {
   font-weight: bold;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans td:nth-child(2) {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm td:nth-child(2) {
   padding: 5px 0;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans td:last-child {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm td:last-child {
   width: 60px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans-inner {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm-inner {
   color: #e74a10;
   padding: 0 5px;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans-inner:first-child:not(:last-child) {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm-inner:first-child:not(:last-child) {
   padding-bottom: 2.5px;
   border-bottom: 1px solid white;
 }
 
-.sheet-rolltemplate-bitd-broadcast .sheet-bans-inner:last-child:not(:first-child) {
+.sheet-rolltemplate-bitd-broadcast .sheet-harm-inner:last-child:not(:first-child) {
   padding-top: 2.5px;
 }
 
