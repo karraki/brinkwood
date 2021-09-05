@@ -870,7 +870,7 @@ textarea.sheet-smallcaps {
   padding: 3px 0 0 2px;
   margin: 3px 0 0;
   min-height: 22px;
-  color: #35BDC4;
+  color: #000080;
 }
 
 .sheet-header input[type="hidden"][value=""] + div > .sheet-title::after {
@@ -1536,7 +1536,7 @@ input.sheet-zero {
 .sheet-harmbody textarea {
   font-size: 12px;
   padding: 10px 4px 3px;
-  color: #35BDC4;
+  color: #000080;
   overflow: hidden;
   height: 52px;
   resize: none;
@@ -1912,8 +1912,8 @@ input.sheet-zero {
 .sheet-notes {
   margin-left: 1%;
   font-family: Georgia, serif;
-  color: #35BDC4;
-  font-size: 20px;
+  color: #000080;
+  font-size: 15px;
   width: 98%;
   background: linear-gradient(transparent 26px, #a7a7a7 1px) 0 0/100% 27px;
   line-height: 27px;
@@ -2059,7 +2059,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-specialability .sheet-checkbox:checked ~ .sheet-abilityname,
 .sheet-item .sheet-checkbox:checked ~ .sheet-itemname,
 .sheet-friend .sheet-friendstate[value="up"] ~ .sheet-auto-expand {
-  color: red;
+  color: #333;
 }
 
 .sheet-friend-contact .sheet-friendstate:not([value="0"]) ~ .sheet-auto-expand {
@@ -2150,7 +2150,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 }
 
 .sheet-friend label.sheet-up .sheet-checkbox:checked + span {
-  border-bottom-color: red;
+  border-bottom-color: #333;
 }
 
 .sheet-friend label.sheet-down {
