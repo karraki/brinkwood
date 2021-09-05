@@ -196,9 +196,17 @@
 
 .sheet-type-selector .sheet-2waybox:not(:checked) + .sheet-2waybox,
 .sheet-type-selector input[value="character"]:not(:checked) ~ span[data-i18n="character_mode"],
-.sheet-type-selector input[value="mask"][type=radio]:not(:checked) ~ span[data-i18n="mask_mode"] {
+.sheet-type-selector input[value="crew"]:not(:checked) ~ span[data-i18n="crew_mode"] {
   display: none;
 }
+
+.sheet-type-selector .sheet-3waybox:not(:checked) + .sheet-3waybox,
+.sheet-type-selector input[value="character"]:not(:checked) ~ span[data-i18n="character_mode"],
+.sheet-type-selector input[value="crew"]:not(:checked) ~ span[data-i18n="crew_mode"],
+.sheet-type-selector input[value="faction"][type=radio]:not(:checked) ~ span[data-i18n="faction_mode"] {
+  display: none;
+}
+
 
 /* SETTINGS */
 .sheet-type[value="character"] ~ .sheet-settings > :not(.sheet-setting-char),
@@ -862,7 +870,7 @@ textarea.sheet-smallcaps {
   padding: 3px 0 0 2px;
   margin: 3px 0 0;
   min-height: 22px;
-  color: #c43c35;
+  color: #35BDC4;
 }
 
 .sheet-header input[type="hidden"][value=""] + div > .sheet-title::after {
@@ -1528,7 +1536,7 @@ input.sheet-zero {
 .sheet-harmbody textarea {
   font-size: 12px;
   padding: 10px 4px 3px;
-  color: #c43c35;
+  color: #35BDC4;
   overflow: hidden;
   height: 52px;
   resize: none;
@@ -1903,8 +1911,8 @@ input.sheet-zero {
 /* NOTES */
 .sheet-notes {
   margin-left: 1%;
-  font-family: "Shadows Into Light", cursive;
-  color: #c43c35;
+  font-family: Georgia, serif;
+  color: #35BDC4;
   font-size: 20px;
   width: 98%;
   background: linear-gradient(transparent 26px, #a7a7a7 1px) 0 0/100% 27px;

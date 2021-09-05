@@ -32,8 +32,15 @@
   <input class="type" type="hidden" name="attr_sheet_type" value="character"/>
   <div class="topholder flex">
     <div class="type-selector label">
+      <!---
       <input class="hidden sheet-2waybox" type="checkbox" name="attr_sheet_type" value="mask"/>
-      <input class="sheet-2waybox" type="radio" name="attr_sheet_type" value="character" checked="checked"/><span data-i18n="character_mode"></span><span data-i18n="mask_mode"></span>
+      <input class="sheet-2waybox" type="radio" name="attr_sheet_type" value="character" checked="checked"/>
+      <input class="sheet-2waybox" type="radio" name="attr_sheet_type" value="mask"/><span data-i18n="character_mode"></span><span data-i18n="mask_mode"></span>
+      --->
+      <input class="hidden sheet-3waybox" type="checkbox" name="attr_sheet_type" value="faction"/>
+      <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="character" checked="checked"/>
+      <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="crew"/>
+      <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="faction"/><span data-i18n="character_mode"></span><span data-i18n="crew_mode"></span><span data-i18n="faction_mode"></span>
     </div>
     <label class="settings-checkbox">
       <input type="checkbox" name="attr_show_settings" value="1"/><span>y</span>
@@ -709,8 +716,13 @@
           <div class="flex">
             <div class="flex-center bonusdieplus">+</div>
             <div class="bonusdietext">
-              <div class="label" data-i18n="push_yourself"></div><span data-i18n="push_yourself_desc1"></span><span name="attr_setting_stress_label"></span><span data-i18n="push_yourself_desc2"></span>
-              <div class="label" data-i18n="devils_bargain"></div>
+              <div class="label" data-i18n="team_assistance"></div><span data-i18n="team_assistance_desc"></span>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-center bonusdieplus">+</div>
+            <div class="bonusdietext">
+              <div class="label" data-i18n="push_yourself"></div><span data-i18n="push_yourself_desc"></span>
             </div>
           </div>
         </div>
@@ -2984,7 +2996,7 @@
       numboxes: "3"
     },
     {
-      name: "i_shortbow",
+      name: "i_short_bow",
       description: "i_short_bow_description",
       numboxes: "3"
     },
