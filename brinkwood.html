@@ -32,15 +32,10 @@
   <input class="type" type="hidden" name="attr_sheet_type" value="character"/>
   <div class="topholder flex">
     <div class="type-selector label">
-      <!---
-      <input class="hidden sheet-2waybox" type="checkbox" name="attr_sheet_type" value="mask"/>
-      <input class="sheet-2waybox" type="radio" name="attr_sheet_type" value="character" checked="checked"/>
-      <input class="sheet-2waybox" type="radio" name="attr_sheet_type" value="mask"/><span data-i18n="character_mode"></span><span data-i18n="mask_mode"></span>
-      --->
-      <input class="hidden sheet-3waybox" type="checkbox" name="attr_sheet_type" value="faction"/>
+      <input class="hidden sheet-3waybox" type="checkbox" name="attr_sheet_type" value="crew"/>
       <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="character" checked="checked"/>
       <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="crew"/>
-      <input class="sheet-3waybox" type="radio" name="attr_sheet_type" value="faction"/><span data-i18n="character_mode"></span><span data-i18n="crew_mode"></span><span data-i18n="faction_mode"></span>
+      <span data-i18n="character_mode"></span><span data-i18n="crew_mode"></span>
     </div>
     <label class="settings-checkbox">
       <input type="checkbox" name="attr_show_settings" value="1"/><span>y</span>
@@ -128,27 +123,22 @@
         <input type="number" name="attr_setting_load_n" value="5"/><span data-i18n="normal"></span>
       </label>
       <label>
-        <input type="number" name="attr_setting_load_h" value="6"/><span data-i18n="heavy"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_flexwidth" value="1"/><span></span><span data-i18n="flexible_width"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_focus_shadow" value="1" checked="checked"/><span></span><span data-i18n="show_outline"></span>
-      </label>
-    </div>
-    <div class="setting-char setting-crew setting-faction">
-      <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_broadcast" value="1" checked="checked"/><span></span><span data-i18n="show_broadcast"></span>
+        <input type="number" name="attr_setting_load_h" value="7"/><span data-i18n="heavy"></span>
       </label>
     </div>
     <div class="setting-char setting-crew">
       <label>
-        <input class="checkbox squarebox" type="checkbox" name="attr_setting_autofill" value="1" checked="checked"/><span></span><span data-i18n="fill_fields"></span>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_flexwidth" value="1"/><span></span><span data-i18n="flexible_width"></span>
+      </label>
+    </div>
+    <div class="setting-char setting-crew">
+      <label>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_focus_shadow" value="1" checked="checked"/><span></span><span data-i18n="show_outline"></span>
+      </label>
+    </div>
+    <div class="setting-char setting-crew">
+      <label>
+        <input class="checkbox squarebox" type="checkbox" name="attr_setting_show_broadcast" value="1" checked="checked"/><span></span><span data-i18n="show_broadcast"></span>
       </label>
     </div>
     <div class="setting-char custom-actions">
@@ -1546,7 +1536,7 @@
     });
   }
   /* DATA */
-  const sheetVersion = "3.9";
+  const sheetVersion = "0.2";
   const crewData = {
     assassins: {
       base: {
