@@ -1,4 +1,4 @@
-# Brinkwood Roll20 Character Sheet
+# Brinkwood Roll20 Character Sheets
 
 ## Brinkwood, The Blood of Tyrants
 >A Forged in the Dark where you take on the role of renegades, thieves, and rebels struggling for freedom and liberation in a castylpunk world controlled by vampires.
@@ -16,8 +16,6 @@ Brinkwood is a production of the San Jenaro Co-Op, a gathering of designers, art
 
 This work is based on v3.9 of the [Blades in the Dark Roll20 source code](https://github.com/karraki/roll20-character-sheets/tree/master/Blades%20in%20the%20Dark).
 
-## License
-
-In accordance with the rules of the [roll20 character sheet repository](https://github.com/karraki/roll20-character-sheets), this work is released under the MIT license (see LICENSE file for details).
+This work is released under the MIT license like all code in the [roll20 character sheet repository](https://github.com/karraki/roll20-character-sheets) (see LICENSE file for details).
 
 Please hack away at this character sheet! You can modifiy it, distribute it, and use it for personal or commercial uses.
