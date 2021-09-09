@@ -19,3 +19,7 @@ This work is based on v3.9 of the [Blades in the Dark Roll20 source code](https:
 This work is released under the MIT license like all code in the [roll20 character sheet repository](https://github.com/karraki/roll20-character-sheets) (see LICENSE file for details).
 
 Please hack away at this character sheet! You can modifiy it, distribute it, and use it for personal or commercial uses.
+
+## Roll20 Custom Sheets
+
+To use this sheet in your [roll20](roll20.net) game go to Settings > Game Settings. Character Sheet Template > Custom. Select Legacy Sanitization. Paste the contents of brinkwood.html, brinkwood.css, and translation.json into the HTML Layout, CSS Styling, and Translation tabs, accordingly. Save, ignore the preview and continue into your roll20 game. If you already had the game open make sure to refresh. Create new character sheets and get ready to play!
