@@ -59,6 +59,26 @@
         <input type="checkbox" name="attr_generate_playbookitem" value="1"/><span data-i18n="add_items"></span>
       </label>
     </div>
+    <div class="setting-crew generaterow">
+      <select name="attr_generate_source_crew">
+        <option value="lies" data-i18n="mask_lies" selected="selected"></option>
+        <option value="ruin" data-i18n="mask_ruin"></option>
+        <option value="terror" data-i18n="mask_terror"></option>
+        <option value="violence" data-i18n="mask_violence"></option>
+        <option value="riot" data-i18n="mask_riot"></option>
+        <option value="torment" data-i18n="mask_torment"></option>
+        <option value="judgment" data-i18n="mask_judgment"></option>
+      </select>
+      <label class="generatebutton">
+        <input type="checkbox" name="attr_generate_crewability" value="1"/><span data-i18n="add_abilities"></span>
+      </label>
+      <label class="generatebutton">
+        <input type="checkbox" name="attr_generate_contact" value="1"/><span data-i18n="add_contacts"></span>
+      </label>
+      <label class="generatebutton">
+        <input type="checkbox" name="attr_generate_upgrade" value="1"/><span data-i18n="add_upgrades"></span>
+      </label>
+    </div>
     <div class="setting-char">
       <label>
         <select name="attr_setting_extra_stress">
@@ -818,6 +838,12 @@
     <textarea class="notes sheet-2col small-margin" spellcheck="false" name="attr_notes" data-i18n-placeholder="notes"></textarea>
   </div>
   <div class="type-crew grid">
+    <div class="crew sheet-2col flex">
+      <input class="label" type="text" spellcheck="false" name="attr_mask" data-i18n-placeholder="mask_description"/>
+      <textarea class="label" spellcheck="false" name="attr_mask_description" data-i18n-placeholder="mask_description"></textarea>
+      <input class="hider" type="hidden" name="attr_show_mask_reminder" value="1"/>
+      <div class="reminder"><span data-i18n="autofill_reminder_mask"></span><br/><span data-i18n="list_masks"></span></div>
+    </div>
     <div class="specialabilities sheet-2col">
       <div class="specialheader label flex">
         <input class="inherit" type="text" spellcheck="false" name="attr_special_abilities_title" value="Special Abilities"/>
@@ -2088,6 +2114,71 @@
         name: "crew_upgrade_willing_to_fight",
         numboxes: "1"
       }]
+    }
+  };
+  const maskData = {
+    lies: {
+      ability: ["deceive", "hide", "reveal", "educate"],
+      special: ["manyfaces", "simpletruths", "honeydwords", "unseenunheard", "tastetruths", "twistthelie", "cloakrumors"],
+      base: {
+        mask_name: "mask_lies",
+        mask_desc: "mask_lies_desc",
+        xp_condition: "mask_lies_xp"
+      }
+    },
+    ruin: {
+      ability: ["corrupt", "crack", "quarry", "spoil"],
+      special: ["alchemicblood", "envenom", "aslowpoison", "transfusion", "cruelend", "bulwark", "oldstone"],
+      base: {
+        mask_name: "mask_ruin",
+        mask_desc: "mask_ruin_desc",
+        xp_condition: "mask_ruin_xp"
+      }
+    },
+    terror: {
+      ability: ["frighten", "awe", "disarm", "flash"],
+      special: ["nolords", "fearyourslaves", "sowdiscord", "noexcuses", "shockawe", "primalterror", "silencedfears"],
+      base: {
+        mask_name: "mask_terror",
+        mask_desc: "mask_terror_desc",
+        xp_condition: "mask_terror_xp"
+      }
+    },
+    violence: {
+      ability: ["slaughter", "carnage", "direct", "cover"],
+      special: ["taunt", "threaten", "wholesalecarnage", "fleshmend", "leadfromthefront", "bloodtaker", "seered"],
+      base: {
+        mask_name: "mask_violence",
+        mask_desc: "mask_violence_desc",
+        xp_condition: "mask_violence_xp"
+      }
+    },
+    riot: {
+      ability: ["rouse", "burn", "explode", "provoke"],
+      special: ["languageunheard", "commonstruggle", "friendscomrads", "fieryrhetoric", "torchespitchforks", "singlespark", "righterwrongs"],
+      base: {
+        mask_name: "mask_riot",
+        mask_desc: "mask_riot_desc",
+        xp_condition: "mask_riot_xp"
+      }
+    },
+    torment: {
+      ability: ["drain", "vivisect", "suture", "tend"],
+      special: ["lure", "astitchintime", "tormentinglaughter", "sufferinsilence", "expertvivasection", "thousandneedles", "sharedpain"],
+      base: {
+        mask_name: "mask_torment",
+        mask_desc: "mask_torment_desc",
+        xp_condition: "mask_torment_xp"
+      }
+    },
+    judgment: {
+      ability: ["snipe", "scout", "read", "slip"],
+      special: ["executioner", "reviewevidence", "peoplesrazor", "carefulaim", "pronouncesentence", "swiftjustice", "readroom"],
+      base: {
+        mask_name: "mask_judgment",
+        mask_desc: "mask_judgment_desc",
+        xp_condition: "mask_judgment_xp"
+      }
     }
   };
   const playbookData = {
